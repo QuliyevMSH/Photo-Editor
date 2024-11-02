@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer and Editor Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Resizer and Editor Tool</h1>
+        <input type="file" id="upload" accept="image/*" />
+        <canvas id="canvas"></canvas>
+        <div class="controls">
+            <button onclick="rotateImage()">Rotate</button>
+            <button onclick="cropImage()">Crop</button>
+            <button onclick="resizeImage()">Resize</button>
+            <button onclick="addText()">Add Text</button>
+            <select id="filter" onchange="applyFilter()">
+                <option value="none">No Filter</option>
+                <option value="grayscale">Grayscale</option>
+                <option value="sepia">Sepia</option>
+                <option value="invert">Invert</option>
+                <option value="brightness">Brightness</option>
+                <option value="contrast">Contrast</option>
+                <option value="saturate">Saturate</option>
+                <option value="hue-rotate">Hue Rotate</option>
+                <option value="blur">Blur</option>
+                <option value="opacity">Opacity</option>
+                <option value="shadow">Shadow</option>
+                <option value="red-tint">Red Tint</option>
+                <option value="blue-tint">Blue Tint</option>
+                <option value="green-tint">Green Tint</option>
+                <option value="pixelate">Pixelate</option>
+                <option value="sharpen">Sharpen</option>
+                <option value="vintage">Vintage</option>
+                <option value="vibrance">Vibrance</option>
+                <option value="noise">Noise</option>
+                <option value="emboss">Emboss</option>
+                <option value="edge-detect">Edge Detect</option>
+            </select>
+            <button onclick="downloadImage()">Download</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
